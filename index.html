@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F3NiX — Links</title>
+<meta name="description" content="Links zu Forum, Projekten und GitHub Repos von F3NiX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #08050f;
+    --grid-line: rgba(0, 255, 214, 0.07);
+    --cyan: #00fff2;
+    --magenta: #ff2ee6;
+    --yellow: #f6ff2e;
+    --card-bg: rgba(15, 10, 30, 0.75);
+    --card-border: #2a1a4a;
+    --text-primary: #e8f9ff;
+    --text-secondary: #8b8fb8;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+      radial-gradient(ellipse at 50% -10%, rgba(255, 46, 230, 0.25), transparent 60%),
+      radial-gradient(ellipse at 50% 110%, rgba(0, 255, 242, 0.18), transparent 60%);
+    background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    padding: 48px 16px;
+  }
+  .container {
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #0d0818;
+    border: 2px solid var(--cyan);
+    box-shadow: 0 0 10px var(--cyan), 0 0 30px rgba(0,255,242,0.5), inset 0 0 15px rgba(0,255,242,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--cyan);
+    margin-bottom: 18px;
+    overflow: hidden;
+    text-shadow: 0 0 8px var(--cyan);
+  }
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0 0 6px;
+    color: var(--text-primary);
+    text-shadow: 0 0 6px var(--magenta), 0 0 18px rgba(255,46,230,0.6);
+  }
+  .bio {
+    font-size: 13px;
+    color: var(--cyan);
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0 0 32px;
+    text-shadow: 0 0 6px rgba(0,255,242,0.5);
+  }
+  .bio::before, .bio::after { content: "// "; opacity: 0.6; }
+  .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .link-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 16px 18px;
+    background: var(--card-bg);
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--text-primary);
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .link-card:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 14px rgba(0,255,242,0.45);
+    transform: translateY(-2px);
+  }
+  .link-card:nth-child(even):hover {
+    border-color: var(--magenta);
+    box-shadow: 0 0 14px rgba(255,46,230,0.45);
+  }
+  .link-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    color: var(--cyan);
+    filter: drop-shadow(0 0 4px rgba(0,255,242,0.6));
+  }
+  .link-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .link-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .link-sub {
+    font-size: 11px;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+  }
+  footer {
+    margin-top: 36px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+  }
+  footer span { color: var(--magenta); }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="avatar">
+      <!-- Ersetze diesen Block durch <img src="avatar.jpg" alt="Avatar"> sobald du ein Bild hast -->
+      F3
+    </div>
+    <h1>F3NiX</h1>
+    <p class="bio">3D-DRUCK &middot; KLIPPER &middot; MAKER</p>
+
+    <div class="links">
+      <a class="link-card" href="https://rapidr3d.duckdns.org" target="_blank" rel="noopener">
+        <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div class="link-text">
+          <span class="link-title">RAPIDR3D FORUM</span>
+          <span class="link-sub">rapidr3d.duckdns.org</span>
+        </div>
+      </a>
+
+      <a class="link-card" href="https://github.com/GmhF3NiX/MakeMyPC" target="_blank" rel="noopener">
+        <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.41-5.28 5.69.41.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.51 10.51 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+        <div class="link-text">
+          <span class="link-title">MAKEMYPC</span>
+          <span class="link-sub">GitHub Repo</span>
+        </div>
+      </a>
+
+      <a class="link-card" href="https://github.com/GmhF3NiX/Pi-Bluetooth-Wlan-Radi" target="_blank" rel="noopener">
+        <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.41-5.28 5.69.41.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.51 10.51 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+        <div class="link-text">
+          <span class="link-title">PI-BLUETOOTH-WLAN-RADIO</span>
+          <span class="link-sub">GitHub Repo</span>
+        </div>
+      </a>
+
+      <a class="link-card" href="https://github.com/GmhF3NiX/klipper-mcu-updater" target="_blank" rel="noopener">
+        <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.41-5.28 5.69.41.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.51 10.51 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+        <div class="link-text">
+          <span class="link-title">KLIPPER MCU UPDATER</span>
+          <span class="link-sub">GitHub Repo</span>
+        </div>
+      </a>
+    </div>
+
+    <footer>SYSTEM.ONLINE <span>&bull;</span> 2026 F3NiX</footer>
+  </div>
+</body>
+</html>
